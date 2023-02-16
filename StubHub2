@@ -83,4 +83,11 @@ wait()
 for _,v in pairs(workspace.FruitStorage:GetDescendants()) do
 if v:IsA("ClickDetector") then
 fireclickdetector(v)
+end
+end
+end
+end
+end
+end
+end
 end)

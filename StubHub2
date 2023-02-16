@@ -92,7 +92,7 @@ end
 end
 end)
 
-local Section = Tab:NewSection("Doors")
+local Tab = Window:NewTab("Doors")
 local Section = Tab:NewSection("Doors GUI [Not Mine]")
 Section:NewButton("GUI", "Its a GUI about Doors", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()

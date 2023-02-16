@@ -320,7 +320,7 @@ Hum.WalkSpeed = 12
 end)
 
 local Tab = Window:NewTab("B: Rebirth")
-local Section = Tab:NewSection("Auto Farm")
+local Section = Tab:NewSection("Auto Farm [Not Mine]")
 Section:NewButton("Auto farm", "Click 1 time city, and after being teleported click again", function()
     local Workspace = game:GetService("Workspace")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")

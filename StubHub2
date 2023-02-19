@@ -98,8 +98,8 @@ Section:NewButton("GUI", "Its a GUI about Doors", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
 end)
 
-local Section = Tab:NewSection("HardMode Doors [Not Mine]")
-Section:NewButton("Hardmode Script", "Script to literally make the game hell, credits to noonie#3507", function()
+local Section = Tab:NewSection("Difficulty Modes Doors [Not Mine]")
+Section:NewButton("Hardmode Script", "Credits to noonie#3507", function()
     --[[
                  _      
  _ __   ___   ___  _ __ (_) ___ 
@@ -317,6 +317,9 @@ UIS.InputBegan:Connect(function(key, gameProcessed)
 end)
 Hum:SetAttribute("SpeedBoost",0)
 Hum.WalkSpeed = 12
+end)
+Section:NewButton("Insanity Mode", "Can be worse than hardmode", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/CKBP3r47"))()
 end)
 
 local Tab = Window:NewTab("B: Rebirth")

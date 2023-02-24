@@ -381,3 +381,9 @@ while wait(0.1) do
         end
     end
 end)
+
+local Tab = Window:NewTab("Raise A Floppa 2")
+local Section = Tab:NewSection("Raise A Floppa 2 GUI [Not Mine")
+Section:NewButton("GUI", "It's a GUI that does everything in the game", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/tip52/Leo-hub/main/loader.lua"))()
+end)

@@ -318,8 +318,11 @@ end)
 Hum:SetAttribute("SpeedBoost",0)
 Hum.WalkSpeed = 12
 end)
-Section:NewButton("Insanity Mode", "Can be worse than hardmode", function()
+Section:NewButton("Insanity Mode", "DOORS Difficulty Script made by Oof#0135", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Ukazix/impossible-mode/main/Protected_79.lua.txt'))()
+end)
+Section:NewButton("Mayhem Mode", "DOORS Difficulty Script made by ThatOneAmethystCreature#0001", function()
+    loadstring(game:HttpGet('https://github.com/HollowedOutMods/MayhemMode/blob/main/loader.lua?raw=true'))()
 end)
 
 local Tab = Window:NewTab("B: Rebirth")

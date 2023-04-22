@@ -415,3 +415,15 @@ local args = {
 game:GetService("Players").LocalPlayer.Character:FindFirstChild("Arctiguana's Ice Shard Blade").Remote:FireServer(unpack(args))
 
 end)
+
+local Tab = Window:NewTab("Pet Simulator X")
+local Section = Tab:NewSection("Eggs")
+Section:NewButton("Skip/Remove Egg Hatch Animation", "Made by autistic hoe in V3rmillion", function()
+    for i,v in pairs(getgc(true)) do
+   if (typeof(v) == 'table' and rawget(v, 'OpenEgg')) then
+       v.OpenEgg = function()
+           return
+       end
+   end
+end
+end)

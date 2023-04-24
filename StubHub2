@@ -417,7 +417,7 @@ game:GetService("Players").LocalPlayer.Character:FindFirstChild("Arctiguana's Ic
 end)
 
 local Tab = Window:NewTab("Pet Simulator X")
-local Section = Tab:NewSection("Eggs [NOT MINE]")
+local Section = Tab:NewSection("Eggs [Not Mine]")
 Section:NewButton("Skip/Remove Egg Hatch Animation", "Made by autistic hoe in V3rmillion", function()
     for i,v in pairs(getgc(true)) do
    if (typeof(v) == 'table' and rawget(v, 'OpenEgg')) then
@@ -427,7 +427,7 @@ Section:NewButton("Skip/Remove Egg Hatch Animation", "Made by autistic hoe in V3
    end
 end
 end)
-local Section = Tab:NewSection("Gamepasses [MINE]")
+local Section = Tab:NewSection("Gamepasses [Mine]")
 Section:NewButton("Super Magnet", "Made by me", function()
     -- Obter o jogador
 local player = game.Players.LocalPlayer

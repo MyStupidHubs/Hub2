@@ -429,74 +429,70 @@ end
 end)
 local Section = Tab:NewSection("Gamepasses [Mine]")
 Section:NewButton("Super Magnet", "Made by me", function()
-    local player = game.Players.LocalPlayer
+    -- Obter o jogador
+local player = game.Players.LocalPlayer
 
+-- Obter as pastas "Orbs" e "Lootbags"
 local orbsFolder = game:GetService("Workspace")["__THINGS"].Orbs
 local lootbagsFolder = game:GetService("Workspace")["__THINGS"].Lootbags
 
+-- Função para teleportar um objeto para o jogador
 local function teleportToPlayer(object)
+    print("Teleportando " .. object.Name .. " para o jogador...")
     object.CFrame = player.Character.HumanoidRootPart.CFrame
 end
 
+-- Verificar se há meshparts na pasta "Lootbags" antes de verificar novas adições
+print("Verificando meshparts na pasta Lootbags...")
+local meshparts = {}
+for _, object in pairs(lootbagsFolder:GetDescendants()) do
+    if object:IsA("MeshPart") then
+        table.insert(meshparts, object)
+    end
+end
+print(#meshparts .. " meshparts encontrados na pasta Lootbags.")
+
+-- Função para verificar se um novo objeto foi adicionado à pasta "Orbs"
 local function onOrbAdded(object)
     if object:IsA("BasePart") then
+        print("Novo orb adicionado: " .. object.Name)
         teleportToPlayer(object)
     end
 end
 
+-- Função para verificar se um novo objeto foi adicionado à pasta "Lootbags"
 local function onLootbagAdded(object)
     if object:IsA("Model") then
+        print("Nova lootbag adicionada: " .. object.Name)
         while object.Parent == nil do
             wait()
         end
         for _, part in ipairs(object:GetDescendants()) do
-            if part:IsA("BasePart") then
+            if part:IsA("MeshPart") then
                 teleportToPlayer(part)
             end
         end
     end
 end
 
-for _, orb in pairs(orbsFolder:GetChildren()) do
-    if orb:IsA("BasePart") then
-        teleportToPlayer(orb)
-    end
-end
-
-for _, lootbag in pairs(lootbagsFolder:GetChildren()) do
-    if lootbag:IsA("Model") then
-        for _, part in ipairs(lootbag:GetDescendants()) do
-            if part:IsA("BasePart") then
-                teleportToPlayer(part)
+-- Função para verificar se há novos objetos na pasta "Lootbags" e teleportá-los
+local function checkForNewMeshParts()
+    while true do
+        for _, object in ipairs(lootbagsFolder:GetDescendants()) do
+            if object:IsA("MeshPart") then
+                teleportToPlayer(object)
             end
         end
-    elseif lootbag:IsA("BasePart") then
-        teleportToPlayer(lootbag)
+        wait(1)  -- Esperar 1 segundo antes de verificar novamente
     end
 end
 
+-- Ouvinte de evento para a adição de objetos à pasta "Orbs"
 orbsFolder.ChildAdded:Connect(onOrbAdded)
 
+-- Ouvinte de evento para a adição de objetos à pasta "Lootbags"
 lootbagsFolder.ChildAdded:Connect(onLootbagAdded)
 
-while #lootbagsFolder:GetChildren() > 0 do
-    wait()
-    for _, lootbag in pairs(lootbagsFolder:GetChildren()) do
-        if lootbag:IsA("Model") then
-            local count = 0
-            for _, part in ipairs(lootbag:GetDescendants()) do
-                if part:IsA("BasePart") then
-                    teleportToPlayer(part)
-                    count = count + 1
-                end
-            end
-            if count == 0 then
-                lootbag:Destroy()
-            end
-        elseif lootbag:IsA("BasePart") then
-            teleportToPlayer(lootbag)
-            lootbag:Destroy()
-        end
-    end
-end
+-- Iniciar a verificação de novos meshparts na pasta "Lootbags"
+coroutine.wrap(checkForNewMeshParts)()
 end)

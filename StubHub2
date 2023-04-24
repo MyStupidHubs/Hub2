@@ -417,7 +417,7 @@ game:GetService("Players").LocalPlayer.Character:FindFirstChild("Arctiguana's Ic
 end)
 
 local Tab = Window:NewTab("Pet Simulator X")
-local Section = Tab:NewSection("Eggs")
+local Section = Tab:NewSection("Eggs [NOT MINE]")
 Section:NewButton("Skip/Remove Egg Hatch Animation", "Made by autistic hoe in V3rmillion", function()
     for i,v in pairs(getgc(true)) do
    if (typeof(v) == 'table' and rawget(v, 'OpenEgg')) then
@@ -426,4 +426,42 @@ Section:NewButton("Skip/Remove Egg Hatch Animation", "Made by autistic hoe in V3
        end
    end
 end
+end)
+local Section = Tab:NewSection("Gamepasses [MINE]")
+Section:NewButton("Super Magnet", "Made by me", function()
+    -- Obter o jogador
+local player = game.Players.LocalPlayer
+
+-- Obter as pastas "Orbs" e "Lootbags"
+local orbsFolder = game:GetService("Workspace")["__THINGS"].Orbs
+local lootbagsFolder = game:GetService("Workspace")["__THINGS"].Lootbags
+
+-- Função para teleportar um objeto para o jogador
+local function teleportToPlayer(object)
+    object.CFrame = player.Character.HumanoidRootPart.CFrame
+end
+
+-- Função para verificar se um novo objeto foi adicionado à pasta "Orbs"
+local function onOrbAdded(object)
+    if object:IsA("BasePart") then
+        teleportToPlayer(object)
+    end
+end
+
+-- Função para verificar se um novo objeto foi adicionado à pasta "Lootbags"
+local function onLootbagAdded(object)
+    if object:IsA("Model") then
+        for _, part in ipairs(object:GetDescendants()) do
+            if part:IsA("BasePart") then
+                teleportToPlayer(part)
+            end
+        end
+    end
+end
+
+-- Ouvinte de evento para a adição de objetos à pasta "Orbs"
+orbsFolder.ChildAdded:Connect(onOrbAdded)
+
+-- Ouvinte de evento para a adição de objetos à pasta "Lootbags"
+lootbagsFolder.ChildAdded:Connect(onLootbagAdded)
 end)

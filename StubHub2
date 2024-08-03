@@ -9,6 +9,1708 @@ local colors = {
 }
 local Window = Library.CreateLib("Stub Hub", colors)
 
+local Tab = Window:NewTab("World Sail")
+local Section = Tab:NewSection("Auto Farm [By Me and NoTengoPaiXD#5421]")
+Section:NewButton("Using Melee", "Skill Z. To get the quest you need level 500", function(state)
+        spawn(function()
+        _G.Enabled = true
+        
+        --Settings
+        local Enemy = "BlackLeg"
+        local Distance = 18
+        
+        --Variable
+        local player = game.Players.LocalPlayer
+        
+        --Equip
+        local function Equip()
+            if not player.Character:FindFirstChildOfClass("Tool") then
+                Weapon = player.Backpack:FindFirstChildOfClass("Tool")
+                player.Character.Humanoid:EquipTool(Weapon)
+            end
+        end
+        
+        --Farm
+        while wait() do
+        while _G.Enabled == true do
+            for i, thing in ipairs(workspace:GetDescendants()) do
+                if _G.Enabled == true and player.Character and thing.Name == Enemy and thing:FindFirstChild("Humanoid") then
+                    local health = thing.Humanoid.Health
+                    repeat
+                        Equip()
+                        player.Character.HumanoidRootPart.CFrame = thing.HumanoidRootPart.CFrame * CFrame.new(Vector3.new(0, 0, Distance))
+                        Weapon:Activate()
+                        wait()
+                        health = thing.Humanoid.Health
+                    until health <= 0
+                    
+                end
+            end
+            wait()
+        end
+        end
+        end)
+        
+        spawn(function()
+        _G.Combat = true
+        
+        while wait() do
+        if _G.Combat == true then
+        local args = {
+        [1] = "GroundSlam",
+        }
+
+        game:GetService("Players").LocalPlayer.Character.Regular.Client.Server.Ability:FireServer(unpack(args))
+
+        end
+        end
+        end)
+        
+        spawn(function()
+        _G.Quest15 = true
+        
+        while wait(1) do
+        if _G.Quest15 == true then
+        local args = {
+            [1] = "Quest15"
+        }
+        
+        game:GetService("ReplicatedStorage").Accept:FireServer(unpack(args))
+        end
+        end
+        end)
+        end)
+        
+Section:NewButton("Using Bombu", "Skill Z. To get the quest you need level 500", function(state)
+        spawn(function()
+        _G.Enabled = true
+        
+        --Settings
+        local Enemy = "BlackLeg"
+        local Distance = 18
+        
+        --Variable
+        local player = game.Players.LocalPlayer
+        
+        --Equip
+        local function Equip()
+            if not player.Character:FindFirstChildOfClass("Tool") then
+                Weapon = player.Backpack:FindFirstChildOfClass("Tool")
+                player.Character.Humanoid:EquipTool(Weapon)
+            end
+        end
+        
+        --Farm
+        while wait() do
+        while _G.Enabled == true do
+            for i, thing in ipairs(workspace:GetDescendants()) do
+                if _G.Enabled == true and player.Character and thing.Name == Enemy and thing:FindFirstChild("Humanoid") then
+                    local health = thing.Humanoid.Health
+                    repeat
+                        Equip()
+                        player.Character.HumanoidRootPart.CFrame = thing.HumanoidRootPart.CFrame * CFrame.new(Vector3.new(0, 0, Distance))
+                        Weapon:Activate()
+                        wait()
+                        health = thing.Humanoid.Health
+                    until health <= 0
+                    
+                end
+            end
+            wait()
+        end
+        end
+        end)
+        
+        spawn(function()
+       _G.Combat = true
+                
+                while wait() do
+                if _G.Combat == true then
+                local args = {
+                    [1] = "BombExplode"
+                }
+                
+                game:GetService("Players").LocalPlayer.Character.Bomb.Client.Server.Ability:FireServer(unpack(args))
+                end
+                end
+                end)
+        
+        spawn(function()
+        _G.Quest15 = true
+        
+        while wait(1) do
+        if _G.Quest15 == true then
+        local args = {
+            [1] = "Quest15"
+        }
+        
+        game:GetService("ReplicatedStorage").Accept:FireServer(unpack(args))
+        end
+        end
+        end)
+        end)
+    
+    Section:NewButton("Using Barrier", "Skill X,C. To get the quest you need level 500", function(state)
+        spawn(function()
+        _G.Enabled = true
+        
+        --Settings
+        local Enemy = "BlackLeg"
+        local Distance = 18
+        
+        --Variable
+        local player = game.Players.LocalPlayer
+        
+        --Equip
+        local function Equip()
+            if not player.Character:FindFirstChildOfClass("Tool") then
+                Weapon = player.Backpack:FindFirstChildOfClass("Tool")
+                player.Character.Humanoid:EquipTool(Weapon)
+            end
+        end
+        
+        --Farm
+        while wait() do
+        while _G.Enabled == true do
+            for i, thing in ipairs(workspace:GetDescendants()) do
+                if _G.Enabled == true and player.Character and thing.Name == Enemy and thing:FindFirstChild("Humanoid") then
+                    local health = thing.Humanoid.Health
+                    repeat
+                        Equip()
+                        player.Character.HumanoidRootPart.CFrame = thing.HumanoidRootPart.CFrame * CFrame.new(Vector3.new(0, 0, Distance))
+                        Weapon:Activate()
+                        wait()
+                        health = thing.Humanoid.Health
+                    until health <= 0
+                    
+                end
+            end
+            wait()
+        end
+        end
+        end)
+        
+        spawn(function()
+        _G.BarrierPistol = true
+        
+        while wait() do
+        if _G.BarrierPistol == true then
+        local args = {
+        [1] = "BarrierPistol",
+        }
+
+        game:GetService("Players").LocalPlayer.Character.Barrier.Client.Server.Ability:FireServer(unpack(args))
+        end
+        end
+        end)
+                
+        spawn(function()
+        _G.Barrier = true
+        
+        while wait(0.5) do
+        if _G.Barrier == true then
+        local args = {
+        [1] = "Barrier"
+        }
+
+        game:GetService("Players").LocalPlayer.Character.Barrier.Client.Server.Ability:FireServer(unpack(args))
+        end
+        end
+        end)
+        
+        spawn(function()
+        _G.Quest15 = true
+        
+        while wait(1) do
+        if _G.Quest15 == true then
+        local args = {
+            [1] = "Quest15"
+        }
+        
+        game:GetService("ReplicatedStorage").Accept:FireServer(unpack(args))
+        end
+        end
+        end)
+        end)
+
+local Tab = Window:NewTab("Juice Pirates")
+local Section = Tab:NewSection("Key Farm [By Me and NoTengoPaiXD#5421]")
+Section:NewToggle("Zombie", "Will farm the zombie boss", function(state)
+    if state then
+        _G.Zombie = true
+_G.MarineBoss = false
+_G.Arlong = false
+_G.Gorila = false
+_G.Enel = false
+_G.Mihawk = false
+
+spawn(function()
+while wait() do
+if _G.Zombie == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(1822.88269, 217.496246, -2469.17969)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(1823.216064453125, 189.07374572753906, -2468.97900390625)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.MarineBoss == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-4805.07275, 224.6577, -3043.62988, -0.0532366559)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-4806.40673828125, 192.47412109375, -3043.26513671875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Arlong == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-3694.00464, 209.978256, -6630.76807)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-3693.870361328125, 185.2244110107422, -6630.6884765625)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Gorila == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1489.33203, 293.952179, 1500.66003)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-1490.60546875, 274.18450927734375, 1500.6180419921875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Enel == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-5401.76758, 3043.34912, 1420.1405)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-5401.248046875, 3016.869873046875, 1419.3779296875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Mihawk == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1448.38867, 230.328812, -678.783997)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-1448.784912109375, 184.08502197265625, -679.248046875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+    else
+        _G.Zombie = false
+_G.MarineBoss = false
+_G.Arlong = false
+_G.Gorila = false
+_G.Enel = false
+_G.Mihawk = false
+
+spawn(function()
+while wait() do
+if _G.Zombie == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(1822.88269, 217.496246, -2469.17969)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(1823.216064453125, 189.07374572753906, -2468.97900390625)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.MarineBoss == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-4805.07275, 224.6577, -3043.62988, -0.0532366559)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-4806.40673828125, 192.47412109375, -3043.26513671875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Arlong == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-3694.00464, 209.978256, -6630.76807)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-3693.870361328125, 185.2244110107422, -6630.6884765625)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Gorila == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1489.33203, 293.952179, 1500.66003)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-1490.60546875, 274.18450927734375, 1500.6180419921875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Enel == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-5401.76758, 3043.34912, 1420.1405)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-5401.248046875, 3016.869873046875, 1419.3779296875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Mihawk == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1448.38867, 230.328812, -678.783997)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-1448.784912109375, 184.08502197265625, -679.248046875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+    end
+end)
+
+Section:NewToggle("Marine", "Will farm the marine boss", function(state)
+    if state then
+        _G.Zombie = false
+_G.MarineBoss = true
+_G.Arlong = false
+_G.Gorila = false
+_G.Enel = false
+_G.Mihawk = false
+
+spawn(function()
+while wait() do
+if _G.Zombie == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(1822.88269, 217.496246, -2469.17969)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(1823.216064453125, 189.07374572753906, -2468.97900390625)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.MarineBoss == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-4805.07275, 224.6577, -3043.62988)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-4806.40673828125, 192.47412109375, -3043.26513671875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Arlong == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-3694.00464, 209.978256, -6630.76807)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-3693.870361328125, 185.2244110107422, -6630.6884765625)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Gorila == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1489.33203, 293.952179, 1500.66003)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-1490.60546875, 274.18450927734375, 1500.6180419921875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Enel == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-5401.76758, 3043.34912, 1420.1405)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-5401.248046875, 3016.869873046875, 1419.3779296875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Mihawk == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1448.38867, 230.328812, -678.783997)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-1448.784912109375, 184.08502197265625, -679.248046875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+    else
+_G.Zombie = false
+_G.MarineBoss = false
+_G.Arlong = false
+_G.Gorila = false
+_G.Enel = false
+_G.Mihawk = false
+
+spawn(function()
+while wait() do
+if _G.Zombie == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(1822.88269, 217.496246, -2469.17969)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(1823.216064453125, 189.07374572753906, -2468.97900390625)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.MarineBoss == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-4805.07275, 224.6577, -3043.62988, -0.0532366559)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-4806.40673828125, 192.47412109375, -3043.26513671875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Arlong == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-3694.00464, 209.978256, -6630.76807)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-3693.870361328125, 185.2244110107422, -6630.6884765625)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Gorila == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1489.33203, 293.952179, 1500.66003)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-1490.60546875, 274.18450927734375, 1500.6180419921875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Enel == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-5401.76758, 3043.34912, 1420.1405)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-5401.248046875, 3016.869873046875, 1419.3779296875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Mihawk == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1448.38867, 230.328812, -678.783997)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-1448.784912109375, 184.08502197265625, -679.248046875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+    end
+end)
+
+Section:NewToggle("Arlong", "Will farm the arlong boss", function(state)
+    if state then
+        _G.Zombie = false
+_G.MarineBoss = false
+_G.Arlong = true
+_G.Gorila = false
+_G.Enel = false
+_G.Mihawk = false
+
+spawn(function()
+while wait() do
+if _G.Zombie == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(1822.88269, 217.496246, -2469.17969)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(1823.216064453125, 189.07374572753906, -2468.97900390625)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.MarineBoss == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-4805.07275, 224.6577, -3043.62988, -0.0532366559)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-4806.40673828125, 192.47412109375, -3043.26513671875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Arlong == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-3694.00464, 209.978256, -6630.76807)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-3693.870361328125, 185.2244110107422, -6630.6884765625)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Gorila == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1489.33203, 293.952179, 1500.66003)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-1490.60546875, 274.18450927734375, 1500.6180419921875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Enel == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-5401.76758, 3043.34912, 1420.1405)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-5401.248046875, 3016.869873046875, 1419.3779296875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Mihawk == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1448.38867, 230.328812, -678.783997)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-1448.784912109375, 184.08502197265625, -679.248046875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+    else
+        _G.Zombie = false
+_G.MarineBoss = false
+_G.Arlong = false
+_G.Gorila = false
+_G.Enel = false
+_G.Mihawk = false
+
+spawn(function()
+while wait() do
+if _G.Zombie == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(1822.88269, 217.496246, -2469.17969)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(1823.216064453125, 189.07374572753906, -2468.97900390625)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.MarineBoss == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-4805.07275, 224.6577, -3043.62988, -0.0532366559)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-4806.40673828125, 192.47412109375, -3043.26513671875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Arlong == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-3694.00464, 209.978256, -6630.76807)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-3693.870361328125, 185.2244110107422, -6630.6884765625)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Gorila == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1489.33203, 293.952179, 1500.66003)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-1490.60546875, 274.18450927734375, 1500.6180419921875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Enel == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-5401.76758, 3043.34912, 1420.1405)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-5401.248046875, 3016.869873046875, 1419.3779296875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Mihawk == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1448.38867, 230.328812, -678.783997)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-1448.784912109375, 184.08502197265625, -679.248046875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+    end
+end)
+
+Section:NewToggle("Gorilla", "Will farm the gorilla boss", function(state)
+    if state then
+        _G.Zombie = false
+_G.MarineBoss = false
+_G.Arlong = false
+_G.Gorila = true
+_G.Enel = false
+_G.Mihawk = false
+
+spawn(function()
+while wait() do
+if _G.Zombie == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(1822.88269, 217.496246, -2469.17969)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(1823.216064453125, 189.07374572753906, -2468.97900390625)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.MarineBoss == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-4805.07275, 224.6577, -3043.62988, -0.0532366559)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-4806.40673828125, 192.47412109375, -3043.26513671875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Arlong == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-3694.00464, 209.978256, -6630.76807)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-3693.870361328125, 185.2244110107422, -6630.6884765625)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Gorila == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1489.33203, 293.952179, 1500.66003)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-1490.60546875, 274.18450927734375, 1500.6180419921875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Enel == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-5401.76758, 3043.34912, 1420.1405)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-5401.248046875, 3016.869873046875, 1419.3779296875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Mihawk == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1448.38867, 230.328812, -678.783997)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-1448.784912109375, 184.08502197265625, -679.248046875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+    else
+        _G.Zombie = false
+_G.MarineBoss = false
+_G.Arlong = false
+_G.Gorila = false
+_G.Enel = false
+_G.Mihawk = false
+
+spawn(function()
+while wait() do
+if _G.Zombie == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(1822.88269, 217.496246, -2469.17969)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(1823.216064453125, 189.07374572753906, -2468.97900390625)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.MarineBoss == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-4805.07275, 224.6577, -3043.62988, -0.0532366559)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-4806.40673828125, 192.47412109375, -3043.26513671875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Arlong == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-3694.00464, 209.978256, -6630.76807)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-3693.870361328125, 185.2244110107422, -6630.6884765625)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Gorila == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1489.33203, 293.952179, 1500.66003)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-1490.60546875, 274.18450927734375, 1500.6180419921875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Enel == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-5401.76758, 3043.34912, 1420.1405)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-5401.248046875, 3016.869873046875, 1419.3779296875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Mihawk == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1448.38867, 230.328812, -678.783997)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-1448.784912109375, 184.08502197265625, -679.248046875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+    end
+end)
+
+Section:NewToggle("Enel", "Will farm the Enel boss", function(state)
+    if state then
+        _G.Zombie = false
+_G.MarineBoss = false
+_G.Arlong = false
+_G.Gorila = false
+_G.Enel = true
+_G.Mihawk = false
+
+spawn(function()
+while wait() do
+if _G.Zombie == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(1822.88269, 217.496246, -2469.17969)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(1823.216064453125, 189.07374572753906, -2468.97900390625)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.MarineBoss == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-4805.07275, 224.6577, -3043.62988, -0.0532366559)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-4806.40673828125, 192.47412109375, -3043.26513671875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Arlong == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-3694.00464, 209.978256, -6630.76807)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-3693.870361328125, 185.2244110107422, -6630.6884765625)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Gorila == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1489.33203, 293.952179, 1500.66003)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-1490.60546875, 274.18450927734375, 1500.6180419921875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Enel == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-5401.76758, 3043.34912, 1420.1405)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-5401.248046875, 3016.869873046875, 1419.3779296875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Mihawk == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1448.38867, 230.328812, -678.783997)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-1448.784912109375, 184.08502197265625, -679.248046875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+    else
+        _G.Zombie = false
+_G.MarineBoss = false
+_G.Arlong = false
+_G.Gorila = false
+_G.Enel = false
+_G.Mihawk = false
+
+spawn(function()
+while wait() do
+if _G.Zombie == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(1822.88269, 217.496246, -2469.17969)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(1823.216064453125, 189.07374572753906, -2468.97900390625)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.MarineBoss == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-4805.07275, 224.6577, -3043.62988, -0.0532366559)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-4806.40673828125, 192.47412109375, -3043.26513671875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Arlong == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-3694.00464, 209.978256, -6630.76807)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-3693.870361328125, 185.2244110107422, -6630.6884765625)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Gorila == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1489.33203, 293.952179, 1500.66003)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-1490.60546875, 274.18450927734375, 1500.6180419921875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Enel == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-5401.76758, 3043.34912, 1420.1405)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-5401.248046875, 3016.869873046875, 1419.3779296875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Mihawk == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1448.38867, 230.328812, -678.783997)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-1448.784912109375, 184.08502197265625, -679.248046875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+    end
+end)
+
+Section:NewToggle("Mihawk", "Will farm the Mihawk boss", function(state)
+    if state then
+        _G.Zombie = false
+_G.MarineBoss = false
+_G.Arlong = false
+_G.Gorila = false
+_G.Enel = false
+_G.Mihawk = true
+
+spawn(function()
+while wait() do
+if _G.Zombie == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(1822.88269, 217.496246, -2469.17969)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(1823.216064453125, 189.07374572753906, -2468.97900390625)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.MarineBoss == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-4805.07275, 224.6577, -3043.62988, -0.0532366559)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-4806.40673828125, 192.47412109375, -3043.26513671875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Arlong == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-3694.00464, 209.978256, -6630.76807)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-3693.870361328125, 185.2244110107422, -6630.6884765625)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Gorila == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1489.33203, 293.952179, 1500.66003)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-1490.60546875, 274.18450927734375, 1500.6180419921875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Enel == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-5401.76758, 3043.34912, 1420.1405)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-5401.248046875, 3016.869873046875, 1419.3779296875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Mihawk == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1448.38867, 230.328812, -678.783997)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-1448.784912109375, 184.08502197265625, -679.248046875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+    else
+        _G.Zombie = false
+_G.MarineBoss = false
+_G.Arlong = false
+_G.Gorila = false
+_G.Enel = false
+_G.Mihawk = false
+
+spawn(function()
+while wait() do
+if _G.Zombie == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(1822.88269, 217.496246, -2469.17969)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(1823.216064453125, 189.07374572753906, -2468.97900390625)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.MarineBoss == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-4805.07275, 224.6577, -3043.62988, -0.0532366559)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-4806.40673828125, 192.47412109375, -3043.26513671875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Arlong == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-3694.00464, 209.978256, -6630.76807)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-3693.870361328125, 185.2244110107422, -6630.6884765625)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Gorila == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1489.33203, 293.952179, 1500.66003)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-1490.60546875, 274.18450927734375, 1500.6180419921875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Enel == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-5401.76758, 3043.34912, 1420.1405)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-5401.248046875, 3016.869873046875, 1419.3779296875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if _G.Mihawk == true then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1448.38867, 230.328812, -678.783997)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+pl.CFrame = location
+    local args = {
+    [1] = "Thunder",
+    [2] = Vector3.new(-1448.784912109375, 184.08502197265625, -679.248046875)
+}
+
+game:GetService("ReplicatedStorage").RemoteFolder.Damage:FireServer(unpack(args))
+end
+end
+end)
+    end
+end)
+
 local Tab = Window:NewTab("One Piece Tycoon")
 local Section = Tab:NewSection("Auto Click First Dropper [Not Mine]")
 Section:NewButton("World Government", "it will automatically click on the first dropper", function()
@@ -495,12 +2197,6 @@ lootbagsFolder.ChildAdded:Connect(onLootbagAdded)
 
 -- Iniciar a verificação de novos meshparts na pasta "Lootbags"
 coroutine.wrap(checkForNewMeshParts)()
-end)
-
-local Tab = Window:NewTab("Ultra Power Tycoon")
-local Section = Tab:NewSection("GUI [Not Mine]")
-Section:NewButton("GUI", "Script found in V3rmillion, I don't find the credits", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ToraIsMe/ToraIsMe/main/0ultra", true))()
 end)
 
 local Tab = Window:NewTab("Hoopz")

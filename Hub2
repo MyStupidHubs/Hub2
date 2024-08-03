@@ -2093,12 +2093,6 @@ Section:NewButton("GUI", "It's a GUI that does everything in the game", function
     loadstring(game:HttpGet("https://raw.githubusercontent.com/tip52/Leo-hub/main/loader.lua"))()
 end)
 
-local Tab = Window:NewTab("Brookhaven RP")
-local Section = Tab:NewSection("GUI [Not Mine]")
-Section:NewButton("Brookhaven RP Troll", "It's a GUI that does everything in the game", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
-end)
-
 local Tab = Window:NewTab("Pet Simulator X")
 local Section = Tab:NewSection("Eggs [Not Mine]")
 Section:NewButton("Skip/Remove Egg Hatch Animation", "Made by autistic hoe in V3rmillion", function()
